@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #00ff88;
+    text-shadow: 1px 2px 8px #000a;
+    text-align: center; /* Centraliza texto */
+}
+
+.canvas {
+    background-color: #181c2b;
+    display: block;
+    margin: 30px auto 10px auto;
+    border: 4px solid #00ff88;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #0008;
+}
+
+#painel-controle {
+    background: #232526cc;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0005;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 38px 18px 38px;
+    margin: 0 auto 40px auto;
+    gap: 10px;
+}
+
+label, select, button, p {
+    font-size: 1.1rem;
+    margin: 0 8px;
+}
+
+select {
+    background: #232526;
+    color: #00ff88;
+    border: 1.5px solid #00ff88;
+    border-radius: 6px;
+    padding: 4px 10px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+select:focus {
+    border: 1.5px solid #1de9b6;
+}
+
+button {
+    background: linear-gradient(90deg, #00ff88 60%, #1de9b6 100%);
+    color: #232526;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 2px 8px #0003;
+    transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #1de9b6 60%, #00ff88 100%);
+    color: #181c2b;
+}
+
+#pontuacao {
+    font-size: 1.3rem;
+    color: #ff3c38;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+@media (max-width: 500px) {
+    .canvas {
+        width: 98vw !important;
+        height: 98vw !important;
+        max-width: 98vw;
+        max-height: 98vw;
+    }
+    #painel-controle {
+        flex-direction: column;
+        padding: 12px 5vw 10px 5vw;
+        gap: 8px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}

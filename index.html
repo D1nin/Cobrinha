@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cobra</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <h1>Jogo da Cobrinha</h1>
+
+    <canvas class="canvas" id="tela" height="400" width="400">Navegador não suporta o Canvas e HTML5</canvas>
+
+    <div id="painel-controle">
+        <label for="dificuldade">Dificuldade: </label>
+        <select id="dificuldade">
+            <option value="facil">Fácil</option>
+            <option value="medio" selected>Médio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+        <button type="button" onclick="iniciarJogo()">Iniciar Jogo</button>
+        <p>Pontuação: <span id="pontuacao">0</span></p>
+    </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

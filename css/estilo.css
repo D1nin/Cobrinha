@@ -38,7 +38,7 @@ h1 {
     justify-content: center;
     padding: 22px 38px 18px 38px;
     margin: 0 auto 40px auto;
-    gap: 10px;
+    gap: 20px;
 }
 
 label, select, button, p {

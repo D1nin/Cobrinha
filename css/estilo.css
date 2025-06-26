@@ -7,25 +7,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;      /* Centraliza horizontalmente */
-    justify-content: center;  /* Centraliza verticalmente */
+    /* Removido justify-content: center para não centralizar verticalmente */
 }
 
 h1 {
     margin-top: 30px;
+    margin-bottom: 12px; /* Espaço menor abaixo do título */
     font-size: 2.5rem;
     letter-spacing: 2px;
     color: #00ff88;
     text-shadow: 1px 2px 8px #000a;
-    text-align: center; /* Centraliza texto */
-}
-
-.canvas {
-    background-color: #181c2b;
-    display: block;
-    margin: 30px auto 10px auto;
-    border: 4px solid #00ff88;
-    border-radius: 18px;
-    box-shadow: 0 8px 32px #0008;
+    text-align: center;
 }
 
 #painel-controle {
@@ -36,9 +28,18 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 22px 38px 18px 38px;
-    margin: 0 auto 40px auto;
+    padding: 18px 38px 14px 38px; /* Padding um pouco menor */
+    margin: 0 auto 12px auto; /* Menos espaço abaixo */
     gap: 20px;
+}
+
+.canvas {
+    background-color: #181c2b;
+    display: block;
+    margin: 0 auto 10px auto; /* Junta mais do topo */
+    border: 4px solid #00ff88;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #0008;
 }
 
 label, select, button, p {
@@ -67,6 +68,41 @@ button {
     border-radius: 6px;
     padding: 7px 18px;
     font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 2px 8px #0003;
+    transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #1de9b6 60%, #00ff88 100%);
+    color: #181c2b;
+}
+
+#pontuacao {
+    font-size: 1.3rem;
+    color: #ff3c38;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+@media (max-width: 500px) {
+    .canvas {
+        width: 98vw !important;
+        height: 98vw !important;
+        max-width: 98vw;
+        max-height: 98vw;
+    }
+    #painel-controle {
+        flex-direction: column;
+        padding: 12px 5vw 10px 5vw;
+        gap: 8px;
+        margin-bottom: 12px; /* Ajuste para manter próximo do topo no mobile */
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
     cursor: pointer;
     margin-left: 10px;
     box-shadow: 0 2px 8px #0003;
